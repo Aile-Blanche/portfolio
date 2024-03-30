@@ -2,16 +2,35 @@
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-	project: CollectionEntry<'work'>;
+	projectA?: CollectionEntry<'personnalProjects'>,
+	projectB?: CollectionEntry<'professionnalProjects'>
 }
 
-const { data, slug } = Astro.props.project;
+
+let dataA, slugA, dataB, slugB;
+
+if (Astro.props.projectA) {
+	({ data: dataA, slug: slugA } = Astro.props.projectA);
+}
+
+if (Astro.props.projectB) {
+	({ data: dataB, slug: slugB } = Astro.props.projectB);
+}
 ---
 
-<a class="card" href={`/work/${slug}`}>
-	<span class="title">{data.title}</span>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+{Astro.props.projectA &&
+<a class="card" href={`/personnalProjects/${slugA}`}>
+	<span class="title">{dataA.title}</span>
+	<img src={dataA.img} alt={dataA.img_alt || ''} loading="lazy" decoding="async" />
 </a>
+	}
+
+{Astro.props.projectB &&
+<a class="card" href={`/professionnalProjects/${slugB}`}>
+	<span class="title">{dataB.title}</span>
+	<img src={dataB.img} alt={dataB.img_alt || ''} loading="lazy" decoding="async" />
+</a>
+	}
 
 <style>
 	.card {
