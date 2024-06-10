@@ -86,7 +86,7 @@ const professionnalProjects = (await getCollection('professionnalProjects'))
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Projets personnels</h3>
-					<p>Voici une sélection de projets professionnels quie j'ai pu réaliser...</p>
+					<p>Voici une sélection de projets professionnels que j'ai pu réaliser...</p>
 				</header>
 
 				<div class="gallery">
@@ -106,28 +106,6 @@ const professionnalProjects = (await getCollection('professionnalProjects'))
 						Voir plus
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
-				</div>
-			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
 				</div>
 			</section>
 		</main>
