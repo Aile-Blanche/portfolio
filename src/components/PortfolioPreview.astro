@@ -2,33 +2,37 @@
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-	projectA?: CollectionEntry<'personnalProjects'>,
-	projectB?: CollectionEntry<'professionnalProjects'>
+	developpementPersos?: CollectionEntry<'developpementPersosCollection'>,
+	developpementPros?: CollectionEntry<'developpementProsCollection'>,
+	graphismePersos?: CollectionEntry<'graphismePersosCollection'>,
+	graphismePros?: CollectionEntry<'graphismeProsCollection'>,
+	//projectA?: CollectionEntry<'developpementPersosCollection'>,
+	//projectB?: CollectionEntry<'developpementProsCollection'>
 }
 
 
-let dataA, slugA, dataB, slugB;
+let developpementPersosData, developpementPersosSlug, developpementProsData, developpementProsSlug;
 
-if (Astro.props.projectA) {
-	({ data: dataA, slug: slugA } = Astro.props.projectA);
+if (Astro.props.developpementPersos) {
+	({ data: developpementPersosData, slug: developpementPersosSlug } = Astro.props.developpementPersos);
 }
 
-if (Astro.props.projectB) {
-	({ data: dataB, slug: slugB } = Astro.props.projectB);
+if (Astro.props.developpementPros) {
+	({ data: developpementProsData, slug: developpementProsSlug } = Astro.props.developpementPros);
 }
 ---
 
-{Astro.props.projectA &&
-<a class="card" href={`/personnalProjects/${slugA}`}>
-	<span class="title">{dataA.title}</span>
-	<img src={dataA.img} alt={dataA.img_alt || ''} loading="lazy" decoding="async" />
+{Astro.props.developpementPersos &&
+<a class="card" href={`/developpement/${developpementPersosSlug}`}>
+	<span class="title">{developpementPersosData.title}</span>
+	<img src={developpementPersosData.img} alt={developpementPersosData.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 	}
 
-{Astro.props.projectB &&
-<a class="card" href={`/professionnalProjects/${slugB}`}>
-	<span class="title">{dataB.title}</span>
-	<img src={dataB.img} alt={dataB.img_alt || ''} loading="lazy" decoding="async" />
+{Astro.props.developpementPros &&
+<a class="card" href={`/developpement/${developpementProsSlug}`}>
+	<span class="title">{developpementProsData.title}</span>
+	<img src={developpementProsData.img} alt={developpementProsData.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 	}
 

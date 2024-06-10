@@ -17,12 +17,12 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
 // Content Fetching: List four most recent personnal projects
-const personnalProjects = (await getCollection('personnalProjects'))
+const developpementPersosCollection = (await getCollection('developpementPersosCollection'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
 // Content Fetching: List four most recent professionnal projects
-const professionnalProjects = (await getCollection('professionnalProjects'))
+const professionnalProjects = (await getCollection('developpementProsCollection'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
@@ -68,7 +68,7 @@ const professionnalProjects = (await getCollection('professionnalProjects'))
 						{
 							professionnalProjects.map((project) => (
 								<li>
-									<PortfolioPreview projectB={project} />
+									<PortfolioPreview developpementPros={project} />
 								</li>
 							))
 						}
@@ -92,9 +92,9 @@ const professionnalProjects = (await getCollection('professionnalProjects'))
 				<div class="gallery">
 					<Grid variant="offset">
 						{
-							personnalProjects.map((project) => (
+							developpementPersosCollection.map((project) => (
 								<li>
-									<PortfolioPreview projectA={project} />
+									<PortfolioPreview developpementPersos={project} />
 								</li>
 							))
 						}

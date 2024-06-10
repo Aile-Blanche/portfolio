@@ -8,7 +8,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
-const personnalProjects = (await getCollection('personnalProjects')).sort(
+const developpementPersosCollection = (await getCollection('developpementPersosCollection')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
@@ -26,9 +26,9 @@ const personnalProjects = (await getCollection('personnalProjects')).sort(
 			/>
 			<Grid variant="offset">
 				{
-					personnalProjects.map((project) => (
+					developpementPersosCollection.map((project) => (
 						<li>
-							<PortfolioPreview projectA={project} />
+							<PortfolioPreview developpementPersos={project} />
 						</li>
 					))
 				}
