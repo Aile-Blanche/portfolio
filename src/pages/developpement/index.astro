@@ -1,0 +1,37 @@
+personnal_projects.astro---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import ContactCTA from '../../components/ContactCTA.astro';
+import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+import CallToAction from "../../components/CallToAction.astro";
+import Icon from "../../components/Icon.astro";
+
+---
+
+<BaseLayout
+	title="Développement | Alexis BONIFACE"
+	description="Développements d'Alexis BONIFACE"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Développement"
+				tagline="Découvrez mes différents projets de développement."
+				align="start"
+			/>
+			<section class="section with-background with-cta">
+				<div>
+					<ul>
+						<li><a href="/developpement/professionnal_projects">Projets professionnels</a></li>
+						<li><a href="/developpement/personnal_projects">Projets personnels</a></li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

@@ -1,0 +1,39 @@
+professional_projects.astro---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import ContactCTA from '../../components/ContactCTA.astro';
+import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+
+const developpementProsCollection = (await getCollection('developpementProsCollection')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Projets Professionnels | Alexis BONIFACE"
+	description="Projets professionnels d'Alexis BONIFACE"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Projets Professionels"
+				tagline="Découvrez les projets professionnels que j'ai pu réaliser."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					developpementProsCollection.map((project) => (
+						<li>
+							<PortfolioPreview developpementPros={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

@@ -1,12 +1,12 @@
 professional_projects.astro---
 import { getCollection } from 'astro:content';
 
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
-import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
 
 const developpementProsCollection = (await getCollection('developpementProsCollection')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()

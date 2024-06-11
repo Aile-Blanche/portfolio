@@ -11,7 +11,10 @@ interface Props {
 }
 
 
-let developpementPersosData, developpementPersosSlug, developpementProsData, developpementProsSlug;
+let developpementPersosData, developpementPersosSlug,
+	developpementProsData, developpementProsSlug,
+	graphismePersosData, graphismePersosSlug,
+	graphismeProsData, graphismeProsSlug;
 
 if (Astro.props.developpementPersos) {
 	({ data: developpementPersosData, slug: developpementPersosSlug } = Astro.props.developpementPersos);
@@ -20,6 +23,15 @@ if (Astro.props.developpementPersos) {
 if (Astro.props.developpementPros) {
 	({ data: developpementProsData, slug: developpementProsSlug } = Astro.props.developpementPros);
 }
+
+if (Astro.props.graphismePersos) {
+	({ data: graphismePersosData, slug: graphismePersosSlug } = Astro.props.graphismePersos);
+}
+
+if (Astro.props.graphismePros) {
+	({ data: graphismeProsData, slug: graphismeProsSlug } = Astro.props.graphismePros);
+}
+
 ---
 
 {Astro.props.developpementPersos &&
@@ -33,6 +45,20 @@ if (Astro.props.developpementPros) {
 <a class="card" href={`/developpement/${developpementProsSlug}`}>
 	<span class="title">{developpementProsData.title}</span>
 	<img src={developpementProsData.img} alt={developpementProsData.img_alt || ''} loading="lazy" decoding="async" />
+</a>
+	}
+
+{Astro.props.graphismePersos &&
+<a class="card" href={`/graphisme/${graphismePersosSlug}`}>
+	<span class="title">{graphismePersosData.title}</span>
+	<img src={graphismePersosData.img} alt={graphismePersosData.img_alt || ''} loading="lazy" decoding="async" />
+</a>
+	}
+
+{Astro.props.graphismePros &&
+<a class="card" href={`/graphisme/${graphismeProsSlug}`}>
+	<span class="title">{graphismeProsData.title}</span>
+	<img src={graphismeProsData.img} alt={graphismeProsData.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 	}
 
