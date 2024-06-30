@@ -1,7 +1,7 @@
 ---
 title: Projet Sakura
 publishDate: 2024-06-30 00:00:00
-img: /assets/sakura.png
+img: /portfolio/assets/sakura.png
 img_alt: Capture d'écran du projet Sakura
 description: |
   Le projet Sakura est un projet de développement web que j'ai réalisé en BTS. Il s'agit d'un site web de cinémathèque, permettant de consulter des informations sur des films, des réalisateurs, des acteurs, etc.

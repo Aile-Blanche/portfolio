@@ -1,7 +1,7 @@
 ---
 title: Projet Démineur
 publishDate: 2024-06-30 00:00:00
-img: /assets/demineur.png
+img: /portfolio/assets/demineur.png
 img_alt: Capture d'écran du projet Démineur
 description: |
     Le projet Démineur est un projet de développement logiciel que j'ai réalisé en BUT. Il s'agit d'une application de jeu de démineur, comme au bon vieux temps de Windows XP.

@@ -1,7 +1,7 @@
 ---
 title: Projet Horloge Musicale
 publishDate: 2024-06-30 00:00:00
-img: /assets/horloge.png
+img: /portfolio/assets/horloge.png
 img_alt: Capture d'écran du projet Horloge Musicale
 description: |
     Le projet Horloge Musicale est un projet de développement web personnel que j'ai réalisé pour m'entraîner à la programmation, en tant que débutant. Il s'agit d'une horloge en ligne qui permet de consulter l'heure et d'écouter de la musique en même temps.

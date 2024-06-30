@@ -1,7 +1,7 @@
 ---
 title: Projet Ag'Immo
 publishDate: 2024-06-30 00:00:00
-img: /assets/agimmo.PNG
+img: /portfolio/assets/agimmo.PNG
 img_alt: Capture d'écran du projet Ag'Immo
 description: |
     Le projet Ag'Immo est un projet de développement logiciel que j'ai réalisé en BTS. Il s'agit d'une application de gestion immobilière, permettant de gérer des biens immobiliers, des locataires, des propriétaires, etc.
