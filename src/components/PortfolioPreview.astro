@@ -19,14 +19,14 @@ if (Astro.props.projectB) {
 ---
 
 {Astro.props.projectA &&
-<a class="card" href={`/personnalProjects/${slugA}`}>
+<a class="card" href={`/portfolio/personnalProjects/${slugA}`}>
 	<span class="title">{dataA.title}</span>
 	<img src={dataA.img} alt={dataA.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 	}
 
 {Astro.props.projectB &&
-<a class="card" href={`/professionnalProjects/${slugB}`}>
+<a class="card" href={`/portfolio/professionnalProjects/${slugB}`}>
 	<span class="title">{dataB.title}</span>
 	<img src={dataB.img} alt={dataB.img_alt || ''} loading="lazy" decoding="async" />
 </a>
